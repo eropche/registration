@@ -17,10 +17,13 @@ function register(array $userArray)
 function saveImage($image)
 {
     $imageName = basename($image['name']);
-    $uploadfile = 'images/' . $imageName;
+    if (!is_dir($_SERVER['DOCUMENT_ROOT'] . 'images/')) {
+        mkdir($_SERVER['DOCUMENT_ROOT'] . 'images/');
+    }
+    $uploadfile = $_SERVER['DOCUMENT_ROOT'] . 'images/' . $imageName;
     if (move_uploaded_file($image['tmp_name'], $uploadfile)) {
-      return $imageName;
+        return $imageName;
     } else {
-      return null;
+        return null;
     }
 }
