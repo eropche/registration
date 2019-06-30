@@ -18,7 +18,7 @@ function saveImage($image)
 {
     $imageName = basename($image['name']);
     $pathToImageFolder = $_SERVER['DOCUMENT_ROOT'] . '/images/';
-    if (!is_dir($pathToImageFolder) {
+    if (!is_dir($pathToImageFolder)) {
         mkdir($pathToImageFolder);
     }
     $uploadfile = $pathToImageFolder . $imageName;
