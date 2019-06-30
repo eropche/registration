@@ -1,0 +1,39 @@
+
+html {
+    background-color: #333834;
+    font-size: 22px;
+    color: #c7c9d3;
+}
+
+.content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    min-height: calc(100vh - 80px);
+}
+
+.form-row {
+    margin: 30px 0;
+}
+
+.link {
+    text-decoration: underline;
+    color: #c7c9d3;
+}
+
+.form-control-feedback {
+    color:red;
+    font-size: 16px;
+    max-width: 220px;
+}
+
+.profile {
+    margin: 30px 0;
+}
+
+footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
