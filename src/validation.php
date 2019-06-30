@@ -15,6 +15,8 @@ function validateRegistrationForm(array $request, $maxSizeImage)
     
     if (!isset($request['password']) || empty($request['password'])) {
         $errors[]['password'] = isset($_SESSION["en"]) ? 'Password not specified' : 'Пароль не указан';
+    } elseif (strlen($request['password']) < 6) {
+        $errors[]['password'] = isset($_SESSION["en"]) ? 'Password must be at least 6 characters' : 'Пароль должен быть не менее 6 символов';
     }
     if (!isset($request['password_repeat']) || empty($request['password_repeat'])) {
         $errors[]['password_repeat'] = isset($_SESSION["en"]) ? 'Need to repeat the password' : 'Нужно повторить пароль';
