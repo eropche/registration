@@ -1,4 +1,5 @@
 
+Used by RedBeanPHP
 
 Create parameters.php from parameters.dist.php
 
